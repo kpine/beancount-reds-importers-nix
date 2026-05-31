@@ -82,7 +82,7 @@
       overlays.default = final: prev: {
         python3 = prev.python3.override {
           packageOverrides = pyfinal: pyprev: {
-            beancount-reds-importers = self.packages.${final.system}.beancount-reds-importers;
+            beancount-reds-importers = self.packages.${final.stdenv.hostPlatform.system}.beancount-reds-importers;
           };
         };
       };
