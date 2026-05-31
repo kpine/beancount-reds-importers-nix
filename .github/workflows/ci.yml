@@ -8,17 +8,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     permissions:
       id-token: write
       contents: read
+
     steps:
       - uses: actions/checkout@v6.0.2
         with:
           persist-credentials: false
+
       - uses: DeterminateSystems/nix-installer-action@v22
+
       - uses: DeterminateSystems/magic-nix-cache-action@v14
+        with:
+          use-flakehub: false
+
       - uses: DeterminateSystems/flake-checker-action@89c01715e5d0dfdc0a1bfe9d59891ee4945c1483
-      - name: Build default package
-        run: nix build
+
       - name: Check flake
         run: nix flake check
+
+      - name: Build default package
+        run: nix build
