@@ -70,13 +70,6 @@
           default = beancount-reds-importers;
         };
 
-        checks.overlay = let
-          pkgsWithOverlay = import nixpkgs {
-            inherit system;
-            overlays = [ self.overlays.default ];
-          };
-        in pkgsWithOverlay.python3.pkgs.beancount-reds-importers;
-
         devShells.default = pkgs.mkShell {
           packages = [
             (python.withPackages (ps: [
@@ -85,13 +78,5 @@
           ];
         };
       }
-    ) // {
-      overlays.default = final: prev: {
-        python3 = prev.python3.override {
-          packageOverrides = pyfinal: pyprev: {
-            beancount-reds-importers = self.packages.${final.stdenv.hostPlatform.system}.beancount-reds-importers;
-          };
-        };
-      };
-    };
+    );
 }
