@@ -27,7 +27,7 @@ jobs:
         with:
           use-flakehub: false
 
-      - uses: DeterminateSystems/flake-checker-action@89c01715e5d0dfdc0a1bfe9d59891ee4945c1483 # master
+      - uses: DeterminateSystems/flake-checker-action@9ee1c5473f1abdfb299f6c4f0fab813147c97fe3 # master
 
       - name: Check flake
         run: nix flake check -L
