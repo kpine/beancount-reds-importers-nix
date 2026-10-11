@@ -36,5 +36,5 @@ jobs:
       - name: Check flake
         run: nix flake check --print-build-logs
 
-      - name: Run formatter checks
-        run: nix fmt -- --check **/*.nix
+      - name: Run formatter
+        run: nix fmt -- --ci --verbose
