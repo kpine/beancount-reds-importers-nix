@@ -1,1 +1,5 @@
+# build
 result
+
+# direnv
+.direnv/
