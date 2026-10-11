@@ -38,3 +38,6 @@ jobs:
 
       - name: Run formatter
         run: nix fmt -- --ci --verbose
+
+      - name: Build beancount_reds_importers
+        run: nix build --no-link --print-build-logs
