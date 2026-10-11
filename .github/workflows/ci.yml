@@ -34,4 +34,7 @@ jobs:
           fail-mode: true
 
       - name: Check flake
-        run: nix flake check -L
+        run: nix flake check --print-build-logs
+
+      - name: Run formatter
+        run: nix fmt -- --ci --verbose
