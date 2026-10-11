@@ -14,8 +14,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, beancount-reds-importers-src }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+      beancount-reds-importers-src,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         python = pkgs.python3;
@@ -79,6 +86,8 @@
             ]))
           ];
         };
+
+        formatter = pkgs.nixfmt;
       }
     );
 }
