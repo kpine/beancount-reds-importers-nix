@@ -3,11 +3,11 @@
     "beancount-reds-importers-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1777507555,
-        "narHash": "sha256-Gpaywlo8+c9axBTYyrIxvVuCeIbPxUSxBQ+E2ZJ1AAE=",
+        "lastModified": 1791445614,
+        "narHash": "sha256-BOJt7nzxmco41xu09L0CKKzopWHQVWjbynJTqC74PS8=",
         "owner": "redstreet",
         "repo": "beancount_reds_importers",
-        "rev": "2d7770d06a1d1438440a629e2ad786da41a02abc",
+        "rev": "d752fed39a769e72ba86d8631774e67e6683df8f",
         "type": "github"
       },
       "original": {
