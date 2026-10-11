@@ -2,8 +2,10 @@
   description = "Importers for various institutions for Beancount";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst";
+
     flake-utils.url = "github:numtide/flake-utils";
+
     beancount-reds-importers-src = {
       type = "github";
       owner = "redstreet";
