@@ -60,11 +60,6 @@
 
           nativeCheckInputs = with python.pkgs; [ pytestCheckHook ];
 
-          disabledTestPaths = [
-            # broken from commit https://github.com/redstreet/beancount_reds_importers/commit/102b5375691f058a990a9959ae66f44aaaa29a32#diff-1534bc73e66f3534433dd22cba413ced643a92481faf88f58fa72ce0d3f642fd
-            "beancount_reds_importers/importers/healthequity/tests/hsa_test.py"
-          ];
-
           pythonImportsCheck = [ "beancount_reds_importers" ];
 
           meta = {
