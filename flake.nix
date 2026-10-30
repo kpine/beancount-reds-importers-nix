@@ -2,9 +2,7 @@
   description = "Importers for various institutions for Beancount";
 
   inputs = {
-    # FIXME: revert to github url until https://github.com/dependabot/proxy/pull/337 is merged
-    # nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst";
 
     flake-utils.url = "github:numtide/flake-utils";
 
