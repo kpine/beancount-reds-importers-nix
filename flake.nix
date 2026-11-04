@@ -2,7 +2,7 @@
   description = "Importers for various institutions for Beancount";
 
   inputs = {
-    nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst";
+    nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
 
     flake-utils.url = "github:numtide/flake-utils";
 
